@@ -5,7 +5,18 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: PUBLIC_URL=https://8000-takudzwachi-billinguplo-zjfmtbh5rqx.ws-eu97.gitpod.io/
-    command: python main.py
+  - init: |
+      echo "Changing Gitpod port URL..."
+      sed -i -e 's/127.0.0.1:8000/0.0.0.0:8000/g' /etc/gitpod.conf
+      gp sync-done
+      PUBLIC_URL=https://8000-takudzwachi-billinguplo-zjfmtbh5rqx.ws-eu97.gitpod.io/
+    command: |
+      python main.py
+      source env/bin/activate
+ports:
+  - name: billing
+    description: The main application web server
+    port: 8000
+    visibility: public
 
 
