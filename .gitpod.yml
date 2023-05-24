@@ -13,10 +13,7 @@ tasks:
     command: |
       python main.py
       source env/bin/activate
-ports:
-  - name: billing
-    description: The main application web server
-    port: 8000
-    visibility: public
+
+
 
 
