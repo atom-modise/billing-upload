@@ -17,7 +17,7 @@ echo "Checking the Python version..."
 python3 --version
 
 echo "Activating the enviroment..."
-source .env/bin/activate
+source env/bin/activate
 
 echo "Installing Python depenencies..."
 python3 -m pip install --upgrade pip wheel
