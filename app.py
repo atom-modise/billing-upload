@@ -48,7 +48,7 @@ def insert(data_list):
                 date_time_now = today.strftime("%Y-%m-%d %H:%M:%S")
                 payment_status = 0
                 row = (dic["pastel_code"], dic["total_due"], payment_status, date_time_now)
-                query = "INSERT INTO accounts_receivable (pastel_code, total_due, payment_status, date_issued) VALUES "\"(%s, %s, %s,%s)"
+                query = "INSERT INTO accounts_receivable (pastel_code, total_due, payment_status, date_issued) VALUES (%s, %s, %s,%s)"
                 cursor.execute(query, row)
                 connection.commit()
                 row_count += 1
