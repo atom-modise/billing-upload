@@ -30,5 +30,5 @@ async def home():
     return {"Hello": "World"}
 
 if __name__ == '__main__':
-    uvicorn.run(app="__main__:app", host="0.0.0.0", reload=True, port=4000)  
+    uvicorn.run(app="__main__:app", host="0.0.0.0", reload=True, port=8000)  
     # uvicorn.run(app="__main__:app", host="34.235.226.214", reload=True, port=4000)  

@@ -6,13 +6,12 @@
 
 tasks:
   - init: |
-      echo "Changing Gitpod port URL..."
-      sed -i -e 's/127.0.0.1:8000/0.0.0.0:8000/g' /etc/gitpod.conf
-      gp sync-done
-      PUBLIC_URL=https://8000-takudzwachi-billinguplo-zjfmtbh5rqx.ws-eu97.gitpod.io/
-    command: |
-      python main.py
+      echo "Activate env..."
       source env/bin/activate
+    command: |
+      
+      uvicorn main:app
+      
 
 
 
