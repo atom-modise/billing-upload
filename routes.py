@@ -10,6 +10,10 @@ router = APIRouter()
 def database_connected():
     return {"message": connect()}
 
+@router.get('/me')
+def me():
+    return {"message": "Hello from routes.py"}
+
 
 @router.post("/upload-csv")
 def upload(file: UploadFile = File(...)):
