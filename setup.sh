@@ -11,7 +11,7 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 # sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3.8 python3.8-venv
 
 echo "Creating a Python virtual environment"
-python3 -m venv .env
+python3 -m venv env
 
 echo "Checking the Python version..."
 python3 --version
