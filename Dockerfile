@@ -7,13 +7,13 @@ WORKDIR /billing
 # ENV PATH="/billing/:$PATH"
 
 # copy dependencies and install them
-COPY /. /billing
+COPY ./requirements.txt /billing/requirements.txt
 
-RUN python3 pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 
 # copy project files
-# COPY /brandxpert/ /brand/
+COPY ./ /billing
 
 # switch to non-root user
 RUN adduser -D atom && chown -R atom /billing
